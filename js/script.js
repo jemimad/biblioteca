@@ -21,11 +21,7 @@ function addLivros(){
       );
 
       limparValores();
-
-      $(".cadastro").click(function(){
-        $(".listagem").show();
-        $(".cadastro-form").hide();        
-      }); 
+      trocarTela();
 }
 
 function limparValores(){
@@ -33,6 +29,10 @@ function limparValores(){
     $("#autor").val("");
     $("#paginas").val("");
     $("#status").val("");
+}
+function trocarTela(){
+    $(".listagem").show();
+    $(".cadastro-form").hide();        
 }
 
 function remover(botao_remover){
@@ -43,4 +43,6 @@ function voltar(){
   $(".cadastro-form").show();
   $(".listagem").hide();
 }
+
+$('input#txt_consulta').quicksearch('table#tabela tr');
 
