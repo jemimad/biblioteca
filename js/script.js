@@ -1,6 +1,6 @@
 function addLivros(){
     if ($("#tabela tbody").length == 0){
-        $("#tabela").append("<tbody></tbody>");
+        $("#tabela").append("<tbody id='myTable'></tbody>");
       }
      
       // Adiciona Livro na Tabela
@@ -44,5 +44,11 @@ function voltar(){
   $(".listagem").hide();
 }
 
-$('input#txt_consulta').quicksearch('table#tabela tr');
-
+$(document).ready(function(){
+  $("#consulta").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+  });
+});
