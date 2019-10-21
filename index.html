@@ -16,17 +16,8 @@
                 <h2 class="titulo">Biblioteca de Livros</h2>
             </div>
         </div>
-        <div class="row text-center">
-                <div class="col">
-                    <form class="form-inline md-form form-sm mt-0">
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                                  aria-label="Search">
-                              </form>
-                </div>
-            </div>
-        <div class="row text-center" >
-            <div class="col-md-6 fundo-interno1">
+        <div class="row text-center cadastro-form" >
+            <div class="col-md-12 ">
                 <form method="post" id="form-livros">
                     <div class="form-group">
                         <label for="titulo">Título:</label>
@@ -45,23 +36,41 @@
                         <label for="status">Status:</label>
                          <input type="text" class="form-control" id="status" placeholder="Ex: Lido ou Não lido">
                     </div>
-                    <button type="button" class="btn btn-success" id="adicionarLivro" onclick="addLivros()">Cadastrar</button>
+                    <button type="button" class="btn btn-success cadastro" id="adicionarLivro" onclick="addLivros()">Cadastrar</button>
                 </form>
             </div> <!--Fim div col-md-6-->
-            <div class="col-md-6 fundo-interno2">
-                <table id="tabela" class="table table-bordered table-condensed table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Título do Livro</th>
-                                    <th>Autor</th>
-                                    <th>Páginas</th>
-                                    <th>Status</th>
-                                    <th>Deletar</th>
-                                </tr>
-                            </thead>
-                        </table>
-            </div> <!--Fim div col-md-6-->
         </div><!-- Fim div row-->
+        <div class="row text-center listagem" style="display:none">
+                <div class="col-md-12">
+                    <form class="form-inline md-form form-sm mt-0">
+                                <label for="lista-livros">Pesquisar:</label>
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <input class="form-control form-control-sm ml-3 w-75 input-search" type="text" id="lista-livros" alt="lista-livros" placeholder="Search"
+                                  aria-label="Search">
+                              </form>
+                </div>
+        </div>
+        <div class="row text-center listagem" style="display:none">
+            <div class="col md-12">
+                <table id="tabela" class="table table-bordered table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título do Livro</th>
+                            <th>Autor</th>
+                            <th>Páginas</th>
+                            <th>Status</th>
+                            <th>Deletar</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div> <!--Fim div col-md-6-->
+        </div>
+
+        <div class="row listagem" style="display:none">
+            <div class="col-md-12 listagem" style="text-align:right">
+                    <button type="button" class="btn btn-success" id="voltar"  onclick="voltar()">Voltar</button>
+            </div>
+        </div>
     </div><!-- Fim div container-->
     <script src="js/script.js"></script>
     <script src="js/jquery.min.js"></script>

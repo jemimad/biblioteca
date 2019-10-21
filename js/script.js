@@ -19,9 +19,14 @@ function addLivros(){
             "</td>" +
         "</tr>"
       );
-      
+
       limparValores();
-  }
+
+      $(".cadastro").click(function(){
+        $(".listagem").show();
+        $(".cadastro-form").hide();        
+      }); 
+}
 
 function limparValores(){
     $("#titulo").val("");
@@ -32,5 +37,10 @@ function limparValores(){
 
 function remover(botao_remover){
   $(botao_remover).parents("tr").remove();
+}
+
+function voltar(){
+  $(".cadastro-form").show();
+  $(".listagem").hide();
 }
 
