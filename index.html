@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblioteca de Filmes</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid" id="fundo-externo">
+        <div class="row text-center">
+            <div class="col">
+                <h2 class="titulo">Biblioteca de Livros</h2>
+            </div>
+        </div>
+        <div class="row text-center">
+                <div class="col">
+                    <form class="form-inline md-form form-sm mt-0">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+                                  aria-label="Search">
+                              </form>
+                </div>
+            </div>
+        <div class="row text-center" >
+            <div class="col-md-6 fundo-interno1">
+                <form method="post" id="form-livros">
+                    <div class="form-group">
+                        <label for="titulo">Título:</label>
+                            <input type="text" class="form-control" id="titulo" placeholder="Título do Livro">
+                    </div>
+                    <div class="form-group">
+                        <label for="autor">Autor:</label>
+                        <input type="text" class="form-control" id="autor" placeholder="Autor do Livro">
+                    </div>
+                    <div class="form-group">
+                        <label for="paginas">Quantidade de páginas:</label>
+                        <input type="text" class="form-control" id="paginas" placeholder="Ex: 232">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                         <input type="text" class="form-control" id="status" placeholder="Ex: Lido ou Não lido">
+                    </div>
+                    <button type="button" class="btn btn-success" id="adicionarLivro" onclick="addLivros()">Cadastrar</button>
+                </form>
+            </div> <!--Fim div col-md-6-->
+            <div class="col-md-6 fundo-interno2">
+                <table id="tabela" class="table table-bordered table-condensed table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Título do Livro</th>
+                                    <th>Autor</th>
+                                    <th>Páginas</th>
+                                    <th>Status</th>
+                                    <th>Deletar</th>
+                                </tr>
+                            </thead>
+                        </table>
+            </div> <!--Fim div col-md-6-->
+        </div><!-- Fim div row-->
+    </div><!-- Fim div container-->
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
